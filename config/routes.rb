@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'foward/github', as: 'github'
+  get 'forward/github', as: 'github'
   get 'github' => 'forward#github'
   get 'github/:project' => 'forward#github'
 
-  get 'foward/jasa', as: 'jasa'
+  get 'forward/jasa', as: 'jasa'
   get 'jasa' => 'forward#jasa'
 
   get 'forward/linkedin', as: 'linkedin'
