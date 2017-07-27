@@ -19,4 +19,15 @@ class ForwardController < ApplicationController
   def twitter
     redirect_to 'https://twitter.com/PogoPewPew'
   end
+
+  def f
+    if !params[:target]
+      redirect_to action: :index
+    end
+
+    redirect_to case params[:target]
+    when 'company_t'
+      'https://docs.google.com/presentation/d/1tm-j7NTSP4HxyNnrD0RX1XS8i51qVQobGnh0_nIX4SM/edit?usp=sharing'
+    end
+  end
 end
