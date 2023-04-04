@@ -3,10 +3,8 @@ on: [push]
 jobs:
   push-to-heroku:
     runs-on: ubuntu-latest
+    env: 
+      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
-      - run: echo $MY_SECRET
-        env: 
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          MY_SECRET: ${{ secrets.MY_SECRET }}
       - run: heroku git:remote -a cryptic-badlands-5383
       - run: git push heroku master
