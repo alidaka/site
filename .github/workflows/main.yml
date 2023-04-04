@@ -7,6 +7,4 @@ jobs:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
       - uses: actions/checkout@v3
-      - run: heroku git:remote -a cryptic-badlands-5383
-      - run: git remote -v
-      - run: git push heroku master
+      - run: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/cryptic-badlands-5383.git master
