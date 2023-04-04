@@ -7,5 +7,7 @@ jobs:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - run: git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cryptic-badlands-5383.git
-      - run: git push heroku master
+      - run: git push --force heroku master
