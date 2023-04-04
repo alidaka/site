@@ -1,0 +1,8 @@
+name: Deploy to Heroku
+on: [push]
+jobs:
+  push-to-heroku:
+    runs-on: ubuntu-latest
+    steps:
+      - run: heroku git:remote -a cryptic-badlands-5383
+      - run: git push heroku master
