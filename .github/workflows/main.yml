@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/cryptic-badlands-5383.git
-      - run: git push --force heroku master
+      - run: git push heroku master
