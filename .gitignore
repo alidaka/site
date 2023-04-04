@@ -16,9 +16,6 @@
 !/log/.keep
 /tmp
 
-# Ignore ruby-version
-/.ruby-version
-
 # Ignore vim swpfiles
 /.swp
 
